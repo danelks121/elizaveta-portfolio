@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | {{ stylist.name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="about-v6">
+    <section class="about-v6-top">
+      <div class="about-v6-shell">
+        <p class="about-v6-kicker">About</p>
+        <h1>Elizaveta Filippenko</h1>
+        <p class="about-v6-role">Fashion Stylist & Creative Director</p>
+        <div class="about-v6-contact">
+          <span>{{ stylist.instagram }}</span>
+          <span>•</span>
+          <span>{{ stylist.email }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-v6-body">
+      <div class="about-v6-shell">
+
+        <section class="about-v6-row about-v6-row-first">
+          <div class="about-v6-text">
+            <p>
+              I’m Elizaveta, a fashion stylist based in Toronto. I’ve loved clothes for as long as I can remember — not as trend, but as language. To me, fashion is art: something meant to move you, broaden your horizons, and pull you toward angles you haven’t seen before. It should make you feel something.
+            </p>
+          </div>
+
+          <figure class="about-v6-photo about-v6-photo-main">
+            <img src="{{ url_for('static', filename='images/about/3.jpg') }}" alt="Elizaveta on set">
+          </figure>
+        </section>
+
+        <section class="about-v6-row about-v6-row-second">
+          <figure class="about-v6-photo about-v6-photo-work">
+            <img src="{{ url_for('static', filename='images/about/4.jpg') }}" alt="Elizaveta working with team">
+          </figure>
+
+          <div class="about-v6-text">
+            <p>
+              My work lives in contrast and atmosphere. I build editorial worlds — a smoke-and-amber bar, a gothic romance in black lace, a saturated burst of color — and treat each as its own story, designed from the first idea to the final frame. Styling, for me, is exactly that: storytelling.
+            </p>
+            <p>
+              The right look does more than dress a person. It can reveal them or reinvent them — and either way, they leave feeling more powerful, more certain, more alive.
+            </p>
+          </div>
+        </section>
+
+        <section class="about-v6-row about-v6-row-third">
+          <div class="about-v6-text">
+            <p>
+              With more than fifteen publications across Italy, France, the US, and Canada behind me, I keep chasing the same thing I chased as a kid playing with clothes: the moment an outfit stops being fabric and starts telling the truth about who’s wearing it.
+            </p>
+
+            <p class="about-v6-publications">
+              15+ publications across Italy, France, the US, and Canada.
+            </p>
+
+            <a class="about-v6-back" href="{{ url_for('home') }}">Back to Portfolio</a>
+          </div>
+
+          <div class="about-v6-photo-stack">
+            <figure class="about-v6-photo about-v6-photo-portrait">
+              <img src="{{ url_for('static', filename='images/about/1.jpg') }}" alt="Elizaveta portrait">
+            </figure>
+
+            <figure class="about-v6-photo about-v6-photo-walk">
+              <img src="{{ url_for('static', filename='images/about/2.jpg') }}" alt="Elizaveta walking">
+            </figure>
+
+            <figure class="about-v6-photo about-v6-photo-detail">
+              <img src="{{ url_for('static', filename='images/about/5.jpg') }}" alt="Elizaveta editorial detail">
+            </figure>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+</body>
+</html>

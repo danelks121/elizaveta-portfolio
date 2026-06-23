@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ story.title }} | {{ stylist.name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header class="story-hero">
+    <div class="story-hero-inner">
+      <p class="hero-label">{{ story.kicker }} · {{ story.issue }}</p>
+      <h1>{{ story.title }}</h1>
+      <p class="hero-copy">{{ story.description }}</p>
+      <a class="back-link" href="{{ url_for('home') }}">← Back to portfolio</a>
+    </div>
+  </header>
+
+  <main class="page-wrap story-page">
+    <section class="stylist-block">
+      <p class="stylist-label">Stylist</p>
+      <h2>{{ stylist.name }}</h2>
+      <p class="stylist-bio">{{ stylist.bio }}</p>
+    </section>
+
+    <section class="gallery-grid">
+      {% for image in story.images %}
+      <figure class="gallery-item">
+        <img
+          src="{{ url_for('static', filename='images/' + story.folder + '/' + image) }}"
+          alt="{{ story.title }} image {{ loop.index }}"
+        >
+      </figure>
+      {% endfor %}
+    </section>
+  </main>
+</body>
+</html>

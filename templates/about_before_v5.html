@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | {{ stylist.name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="about-v4">
+    <section class="about-v4-hero">
+      <div class="about-v4-hero-inner">
+        <p class="about-v4-kicker">About</p>
+        <h1>Elizaveta Filippenko</h1>
+        <p class="about-v4-role">Fashion Stylist & Creative Director</p>
+        <div class="about-v4-contact">
+          <span>{{ stylist.instagram }}</span>
+          <span>•</span>
+          <span>{{ stylist.email }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-v4-grid about-v4-block about-v4-block-one">
+      <div class="about-v4-copy">
+        <p class="about-v4-label">Profile</p>
+        <h2>Fashion as language, image, and emotion.</h2>
+        <p>
+          I’m Elizaveta, a fashion stylist based in Toronto. I’ve loved clothes for as long as I can remember — not as trend, but as language. To me, fashion is art: something meant to move you, broaden your horizons, and pull you toward angles you haven’t seen before. It should make you feel something.
+        </p>
+      </div>
+      <figure class="about-v4-photo about-v4-photo-main">
+        <img src="{{ url_for('static', filename='images/about/3.jpg') }}" alt="Elizaveta on set">
+      </figure>
+    </section>
+
+    <section class="about-v4-quote">
+      <div class="about-v4-quote-inner">
+        <p class="about-v4-label about-v4-label-light">Creative Direction</p>
+        <h3>I build editorial worlds — each one designed from the first idea to the final frame.</h3>
+      </div>
+    </section>
+
+    <section class="about-v4-grid about-v4-block about-v4-block-two">
+      <figure class="about-v4-photo about-v4-photo-tall">
+        <img src="{{ url_for('static', filename='images/about/1.jpg') }}" alt="Elizaveta portrait">
+      </figure>
+      <div class="about-v4-copy">
+        <p class="about-v4-label">Approach</p>
+        <h2>Styling through contrast, atmosphere, and storytelling.</h2>
+        <p>
+          My work lives in contrast and atmosphere. I build editorial worlds — a smoke-and-amber bar, a gothic romance in black lace, a saturated burst of color — and treat each as its own story, designed from the first idea to the final frame. Styling, for me, is exactly that: storytelling.
+        </p>
+        <p>
+          The right look does more than dress a person. It can reveal them or reinvent them — and either way, they leave feeling more powerful, more certain, more alive.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-v4-grid about-v4-block about-v4-block-three">
+      <div class="about-v4-copy">
+        <p class="about-v4-label">Experience</p>
+        <h2>15+ publications across Italy, France, the US, and Canada.</h2>
+        <p>
+          With more than fifteen publications across Italy, France, the US, and Canada behind me, I keep chasing the same thing I chased as a kid playing with clothes: the moment an outfit stops being fabric and starts telling the truth about who’s wearing it.
+        </p>
+        <a class="about-v4-back" href="{{ url_for('home') }}">Back to Portfolio</a>
+      </div>
+
+      <div class="about-v4-stack">
+        <figure class="about-v4-photo about-v4-photo-small">
+          <img src="{{ url_for('static', filename='images/about/2.jpg') }}" alt="Elizaveta walking">
+        </figure>
+        <figure class="about-v4-photo about-v4-photo-wide">
+          <img src="{{ url_for('static', filename='images/about/4.jpg') }}" alt="Elizaveta working with team">
+        </figure>
+        <figure class="about-v4-photo about-v4-photo-detail">
+          <img src="{{ url_for('static', filename='images/about/5.jpg') }}" alt="Elizaveta editorial detail">
+        </figure>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ stylist.name }} | Styling Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-label">DIGITAL FASHION PORTFOLIO</p>
+      <h1>{{ stylist.name }}</h1>
+      <p class="hero-copy">{{ stylist.intro }}</p>
+      <p class="hero-bio">{{ stylist.bio }}</p>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="cards-grid">
+      {% for story in stories %}
+      <article class="story-card">
+        <a class="story-card-link" href="{{ url_for('story', slug=story.slug) }}">
+          <div class="story-card-image-wrap">
+            <img
+              class="story-card-image"
+              src="{{ url_for('static', filename='images/' + story.folder + '/' + story.cover) }}"
+              alt="{{ story.title }}"
+            >
+          </div>
+
+          <div class="story-card-body">
+            <p class="story-meta">{{ story.kicker }}</p>
+            <h2 class="story-title">{{ story.title }}</h2>
+            <p class="story-description">{{ story.description }}</p>
+            <span class="story-button">View Story</span>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </section>
+  </main>
+</body>
+</html>

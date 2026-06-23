@@ -1,0 +1,293 @@
+:root {
+  --bg: #f5f1ec;
+  --card: #ffffff;
+  --text: #161616;
+  --muted: #7a1d1d;
+  --hero-top: #230507;
+  --hero-bottom: #4b0c12;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero,
+.story-hero {
+  background: linear-gradient(135deg, var(--hero-top), var(--hero-bottom));
+  color: white;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.hero-inner,
+.story-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-label {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0 0 16px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 64px;
+  line-height: 1;
+}
+
+.hero-copy,
+.hero-bio {
+  max-width: 720px;
+  margin: 0 auto 12px;
+  font-size: 20px;
+}
+
+.page-wrap {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 36px 24px 64px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.story-card {
+  background: var(--card);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.story-card-link {
+  display: block;
+}
+
+.story-card-image-wrap {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #ece7e1;
+}
+
+.story-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-card-body {
+  padding: 24px 24px 28px;
+}
+
+.story-meta {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.story-title {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+.story-description {
+  margin: 0 0 22px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.story-button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: #111;
+  color: white;
+  font-weight: 700;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: white;
+  text-decoration: underline;
+}
+
+.story-page {
+  display: grid;
+  gap: 28px;
+}
+
+.stylist-block {
+  background: white;
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.stylist-label {
+  margin: 0 0 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 13px;
+}
+
+.stylist-block h2 {
+  margin: 0 0 10px;
+  font-size: 34px;
+}
+
+.stylist-bio {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gallery-item {
+  margin: 0;
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+@media (max-width: 980px) {
+  .cards-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cards-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .hero-copy,
+  .hero-bio {
+    font-size: 18px;
+  }
+}
+
+
+.gallery-link {
+  display: block;
+  cursor: zoom-in;
+}
+
+.gallery-link img {
+  display: block;
+}
+
+
+.gallery-link {
+  display: block;
+  cursor: zoom-in;
+}
+
+.gallery-link img {
+  display: block;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  z-index: 9999;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox-image {
+  max-width: 88vw;
+  max-height: 88vh;
+  border-radius: 16px;
+}
+
+.lightbox-close,
+.lightbox-arrow {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  cursor: pointer;
+  border-radius: 999px;
+}
+
+.lightbox-close {
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.lightbox-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.lightbox-prev {
+  left: 24px;
+}
+
+.lightbox-next {
+  right: 24px;
+}

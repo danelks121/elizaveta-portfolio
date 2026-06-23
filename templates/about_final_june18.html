@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,400;10..100,600&display=swap" rel="stylesheet">
+</head>
+
+<body class="about-figma-body">
+  <a href="/" class="back-to-portfolio">← Back to portfolio</a>
+
+  <main class="about-figma-page">
+
+    <section class="about-figma-slide about-figma-hero">
+      <div class="about-figma-hero-text">
+        <h1>
+          <span>Elizaveta</span>
+          <span>Filippenko</span>
+        </h1>
+
+        <p>Fashion stylist and creative<br>director based in Toronto</p>
+      </div>
+
+      <img class="about-figma-hero-img" src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Elizaveta Filippenko">
+
+      <div class="about-figma-red-bar"></div>
+    </section>
+
+    <section class="about-figma-slide about-figma-story">
+      <img class="about-figma-walk-img" src="{{ url_for('static', filename='images/walk.jpg') }}" alt="Styling walk">
+
+      <div class="about-figma-story-text">
+        <p>
+          I’ve loved clothes for as long as I can remember — not as trend, but as language.
+          To me, fashion is art: something that meant to move you, broaden your horizons,
+          and pull you toward angles you haven’t seen before. It should make you feel something.
+        </p>
+
+        <p>
+          My work lives in contrast and atmosphere. I direct and style editorial worlds —
+          shaping each from the first concept to the final frame.
+        </p>
+      </div>
+
+      <div class="about-figma-red-bar"></div>
+    </section>
+
+    <section class="about-figma-slide about-figma-work">
+      <div class="about-figma-work-text">
+        <p>
+          Styling, for me, is storytelling. The right look doesn’t simply dress a person —
+          it can reveal them or reinvent them, and either way they leave feeling more powerful,
+          more certain, more alive.
+        </p>
+
+        <p>
+          With more than fifteen publications across Italy, France, the US, and Canada behind me,
+          I keep chasing the same thing I chased as a kid playing with clothes: the moment an outfit
+          stops being fabric and starts telling the truth about who’s wearing it.
+        </p>
+      </div>
+
+      <div class="about-figma-three-images">
+        <img src="{{ url_for('static', filename='images/process.jpg') }}" alt="Process">
+        <img src="{{ url_for('static', filename='images/intro.jpg') }}" alt="Intro">
+        <img src="{{ url_for('static', filename='images/portrait.jpg') }}" alt="Portrait">
+      </div>
+
+      <div class="about-figma-red-bar"></div>
+    </section>
+
+  </main>
+
+</body>
+</html>

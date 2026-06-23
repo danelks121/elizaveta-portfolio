@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | {{ stylist.name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="about-page-v2">
+    <section class="about-top-v2">
+      <div class="about-top-inner-v2">
+        <p class="about-kicker-v2">ABOUT</p>
+        <h1>{{ stylist.name }}</h1>
+        <p class="about-role-v2">{{ stylist.title }}</p>
+        <p class="about-contact-v2">
+          <span>{{ stylist.instagram }}</span>
+          <span>•</span>
+          <span>{{ stylist.email }}</span>
+        </p>
+        <p class="about-bio-v2">{{ stylist.about_text }}</p>
+        <a class="story-button learn-more-button" href="{{ url_for('home') }}">Back to Portfolio</a>
+      </div>
+    </section>
+
+    <section class="about-story-v2">
+      <div class="about-grid-v2">
+        <figure class="about-card-v2 about-card-main">
+          <img src="{{ url_for('static', filename='images/about/3.jpg') }}" alt="{{ stylist.name }}">
+        </figure>
+
+        <div class="about-note-v2">
+          <p class="about-note-label-v2">Fashion Stylist & Creative Director</p>
+          <h2>Creating image, mood, and narrative through fashion.</h2>
+          <p>
+            This is a trial About page layout. Tomorrow we can replace the text,
+            swap images, and polish the final details — but tonight the structure
+            should already feel more editorial and elevated.
+          </p>
+        </div>
+
+        <figure class="about-card-v2 about-card-small-left">
+          <img src="{{ url_for('static', filename='images/about/1.jpg') }}" alt="{{ stylist.name }}">
+        </figure>
+
+        <figure class="about-card-v2 about-card-small-right">
+          <img src="{{ url_for('static', filename='images/about/2.jpg') }}" alt="{{ stylist.name }}">
+        </figure>
+
+        <figure class="about-card-v2 about-card-wide">
+          <img src="{{ url_for('static', filename='images/about/5.jpg') }}" alt="{{ stylist.name }}">
+        </figure>
+
+        <figure class="about-card-v2 about-card-tall">
+          <img src="{{ url_for('static', filename='images/about/4.jpg') }}" alt="{{ stylist.name }}">
+        </figure>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

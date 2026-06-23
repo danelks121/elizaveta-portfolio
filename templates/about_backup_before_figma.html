@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body class="about-page">
+
+  <section class="about-hero">
+    <div class="about-container">
+
+      <!-- LEFT -->
+      <div class="about-left">
+
+        <div class="vertical-text">PORTFOLIO</div>
+
+        <h1>Elizaveta Filippenko</h1>
+
+        <p class="subtitle">
+          Fashion stylist and creative director based in Toronto
+        </p>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="about-right">
+        <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Hero">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SECOND SECTION -->
+  <section class="about-gallery">
+
+    <p class="about-text">
+      Styling, for me, is storytelling. The right look doesn’t simply dress a person — it can reveal them or reinvent them, and either way they leave feeling more powerful, more certain, more alive.
+    </p>
+
+    <div class="gallery">
+      <img src="{{ url_for('static', filename='images/process.jpg') }}">
+      <img src="{{ url_for('static', filename='images/intro.jpg') }}">
+      <img src="{{ url_for('static', filename='images/walk.jpg') }}">
+    </div>
+
+  </section>
+
+
+  <!-- THIRD SECTION -->
+  <section class="about-final">
+
+    <div class="final-container">
+
+      <div class="final-image">
+        <img src="{{ url_for('static', filename='images/portrait.jpg') }}">
+      </div>
+
+      <div class="final-text">
+        <p>
+          I’ve loved clothes for as long as I can remember — not as trend, but as language. To me, fashion is art: something that meant to move you, broaden your horizons, and pull you toward angles you haven’t seen before.
+        </p>
+
+        <p>
+          My work lives in contrast and atmosphere. I direct and style editorial worlds — shaping each from the first concept to the final frame.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
