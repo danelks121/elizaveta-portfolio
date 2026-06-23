@@ -966,4 +966,70 @@ body.about-figma-body .about-final-grid .about-new-text-small {
   .about-red-line {
     width: 100% !important;
   }
+}/* ===== FINAL RESPONSIVE FIX FOR ABOUT PAGE ===== */
+@media screen and (max-width: 1100px) {
+  html,
+  body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  body.about-figma-body,
+  .about-new-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .about-new-hero,
+  .about-new-section,
+  .about-two-columns,
+  .about-final-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 50px auto !important;
+    padding: 0 20px !important;
+    gap: 34px !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-new-hero img,
+  .about-two-columns img,
+  .about-final-grid img,
+  .about-new-section img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 auto !important;
+  }
+
+  .about-new-text,
+  .about-new-text p,
+  .about-new-text-small,
+  .about-top-note,
+  .about-top-note p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 30px !important;
+    line-height: 1.08 !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-final-grid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .back-to-portfolio {
+    position: fixed !important;
+    top: 18px !important;
+    left: 18px !important;
+    z-index: 9999 !important;
+  }
 }
